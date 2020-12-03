@@ -1,0 +1,168 @@
+.cards {
+  @include flex(4rem);
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  &__category,
+  &__word {
+    width: 300px;
+    background: $color-white
+      url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=)
+      100% 100% no-repeat;
+    background-size: cover;
+    box-shadow: -1px 15px 30px -12px black;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: $base-transition;
+
+    &:hover {
+      transform: translateY(-5px) scale(1.005) translateZ(0);
+      box-shadow: 5px 6px 17px $color-dark-turquoise;
+    }
+  }
+
+  &__image {
+    position: relative;
+    height: 180px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+
+    &_space {
+      background-color: $color-blue;
+    }
+
+    &_food {
+      background-color: $color-light-brown;
+    }
+
+    &_animals {
+      background-color: $color-pistachio;
+    }
+
+    &_body {
+      background-color: $color-dark-blue;
+    }
+
+    &_nature {
+      background-color: $color-light-turquoise;
+    }
+
+    &_colors {
+      background-color: $color-light-gray;
+    }
+
+    &_family {
+      background-color: $color-pink;
+    }
+
+    &_home {
+      background-color: $color-turquoise;
+    }
+
+    img {
+      position: absolute;
+      top: -34px;
+      left: 0;
+      width: 300px;
+    }
+  }
+
+  &__title {
+    @include title(2.5rem, 1.8rem, 0.15rem);
+  }
+
+  &__word {
+    position: relative;
+    perspective: 1000px;
+
+    &_3d {
+      .cards__word-front {
+        transform: rotateY(180deg);
+      }
+    }
+
+    &_3d {
+      .cards__word-back {
+        transform: rotateY(360deg);
+      }
+    }
+
+    &-front {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-back {
+      transform: rotateY(180deg);
+    }
+
+    &-front,
+    &-back {
+      backface-visibility: hidden;
+      transition: all 0.5s ease;
+    }
+
+    &-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 180px;
+      padding-top: 2rem;
+
+      img {
+        width: 160px;
+      }
+    }
+
+    &-title {
+      @include title(2.5rem, 1.8rem, 0.15rem);
+    }
+
+    &-sound {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 45px;
+      height: 45px;
+      background-color: $color-dark-turquoise;
+      border-bottom-left-radius: 18px;
+      border-top-right-radius: 30px;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 13px;
+        left: 11px;
+        width: 21px;
+        height: 21px;
+        background: url('../src/assets/images/sound-icon.png') no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &-turn {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 45px;
+      height: 45px;
+      background-color: $color-light-green;
+      border-bottom-right-radius: 18px;
+      border-top-left-radius: 30px;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 20px;
+        height: 20px;
+        background: url('../src/assets/images/restart-icon.png') no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+}

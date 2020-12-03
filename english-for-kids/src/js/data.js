@@ -1,0 +1,428 @@
+const cardsData = [
+  {
+    name: 'space',
+    cards: [
+      {
+        word: 'rocket',
+        translation: 'ракета',
+        image: '../src/assets/images/space/rocket.svg',
+        audioSrc: '../src/assets/audio/space/rocket.mp3',
+      },
+      {
+        word: 'sun',
+        translation: 'солнце',
+        image: '../src/assets/images/space/sun.svg',
+        audioSrc: '../src/assets/audio/space/sun.mp3',
+      },
+      {
+        word: 'moon',
+        translation: 'луна',
+        image: '../src/assets/images/space/moon.svg',
+        audioSrc: '../src/assets/audio/space/moon.mp3',
+      },
+      {
+        word: 'planet',
+        translation: 'планета',
+        image: '../src/assets/images/space/planet.svg',
+        audioSrc: '../src/assets/audio/space/planet.mp3',
+      },
+      {
+        word: 'earth',
+        translation: 'земля',
+        image: '../src/assets/images/space/earth.svg',
+        audioSrc: '../src/assets/audio/space/earth.mp3',
+      },
+      {
+        word: 'telescope',
+        translation: 'телескоп',
+        image: '../src/assets/images/space/telescope.svg',
+        audioSrc: '../src/assets/audio/space/telescope.mp3',
+      },
+      {
+        word: 'satellite',
+        translation: 'спутник',
+        image: '../src/assets/images/space/satellite.svg',
+        audioSrc: '../src/assets/audio/space/satellite.mp3',
+      },
+      {
+        word: 'astronaut',
+        translation: 'космонавт',
+        image: '../src/assets/images/space/astronaut.svg',
+        audioSrc: '../src/assets/audio/space/astronaut.mp3',
+      },
+    ],
+  },
+  {
+    name: 'food',
+    cards: [
+      {
+        word: 'apple',
+        translation: 'яблоко',
+        image: '../src/assets/images/food/apple.svg',
+        audioSrc: '../src/assets/audio/food/apple.mp3',
+      },
+      {
+        word: 'banana',
+        translation: 'банан',
+        image: '../src/assets/images/food/banana.svg',
+        audioSrc: '../src/assets/audio/food/banana.mp3',
+      },
+      {
+        word: 'fish',
+        translation: 'рыба',
+        image: '../src/assets/images/food/fish.svg',
+        audioSrc: '../src/assets/audio/food/fish.mp3',
+      },
+      {
+        word: 'bread',
+        translation: 'хлеб',
+        image: '../src/assets/images/food/bread.svg',
+        audioSrc: '../src/assets/audio/food/bread.mp3',
+      },
+      {
+        word: 'cheese',
+        translation: 'сыр',
+        image: '../src/assets/images/food/cheese.svg',
+        audioSrc: '../src/assets/audio/food/cheese.mp3',
+      },
+      {
+        word: 'pumpkin',
+        translation: 'тыква',
+        image: '../src/assets/images/food/pumpkin.svg',
+        audioSrc: '../src/assets/audio/food/pumpkin.mp3',
+      },
+      {
+        word: 'cabbage',
+        translation: 'капуста',
+        image: '../src/assets/images/food/cabbage.svg',
+        audioSrc: '../src/assets/audio/food/cabbage.mp3',
+      },
+      {
+        word: 'tomato',
+        translation: 'помидор',
+        image: '../src/assets/images/food/tomato.svg',
+        audioSrc: '../src/assets/audio/food/tomato.mp3',
+      },
+    ],
+  },
+  {
+    name: 'animals',
+    cards: [
+      {
+        word: 'whale',
+        translation: 'кит',
+        image: '../src/assets/images/animals/whale.svg',
+        audioSrc: '../src/assets/audio/animals/whale.mp3',
+      },
+      {
+        word: 'pig',
+        translation: 'свинья',
+        image: '../src/assets/images/animals/pig.svg',
+        audioSrc: '../src/assets/audio/animals/pig.mp3',
+      },
+      {
+        word: 'fox',
+        translation: 'лиса',
+        image: '../src/assets/images/animals/fox.svg',
+        audioSrc: '../src/assets/audio/animals/fox.mp3',
+      },
+      {
+        word: 'koala',
+        translation: 'коала',
+        image: '../src/assets/images/animals/koala.svg',
+        audioSrc: '../src/assets/audio/animals/koala.mp3',
+      },
+      {
+        word: 'tiger',
+        translation: 'тигр',
+        image: '../src/assets/images/animals/tiger.svg',
+        audioSrc: '../src/assets/audio/animals/tiger.mp3',
+      },
+      {
+        word: 'crab',
+        translation: 'краб',
+        image: '../src/assets/images/animals/crab.svg',
+        audioSrc: '../src/assets/audio/animals/crab.mp3',
+      },
+      {
+        word: 'zebra',
+        translation: 'зебра',
+        image: '../src/assets/images/animals/zebra.svg',
+        audioSrc: '../src/assets/audio/animals/zebra.mp3',
+      },
+      {
+        word: 'hippo',
+        translation: 'гиппопотам',
+        image: '../src/assets/images/animals/hippo.svg',
+        audioSrc: '../src/assets/audio/animals/hippo.mp3',
+      },
+    ],
+  },
+  {
+    name: 'body',
+    cards: [
+      {
+        word: 'head',
+        translation: 'голова',
+        image: '../src/assets/images/body/head.svg',
+        audioSrc: '../src/assets/audio/body/head.mp3',
+      },
+      {
+        word: 'neck',
+        translation: 'шея',
+        image: '../src/assets/images/body/neck.svg',
+        audioSrc: '../src/assets/audio/body/neck.mp3',
+      },
+      {
+        word: 'hand',
+        translation: 'рука',
+        image: '../src/assets/images/body/hand.svg',
+        audioSrc: '../src/assets/audio/body/hand.mp3',
+      },
+      {
+        word: 'nose',
+        translation: 'нос',
+        image: '../src/assets/images/body/nose.svg',
+        audioSrc: '../src/assets/audio/body/nose.mp3',
+      },
+      {
+        word: 'skull',
+        translation: 'череп',
+        image: '../src/assets/images/body/skull.svg',
+        audioSrc: '../src/assets/audio/body/skull.mp3',
+      },
+      {
+        word: 'ear',
+        translation: 'ухо',
+        image: '../src/assets/images/body/ear.svg',
+        audioSrc: '../src/assets/audio/body/ear.mp3',
+      },
+      {
+        word: 'tooth',
+        translation: 'зуб',
+        image: '../src/assets/images/body/tooth.svg',
+        audioSrc: '../src/assets/audio/body/tooth.mp3',
+      },
+      {
+        word: 'stomach',
+        translation: 'желудок',
+        image: '../src/assets/images/body/stomach.svg',
+        audioSrc: '../src/assets/audio/body/stomach.mp3',
+      },
+    ],
+  },
+  {
+    name: 'nature',
+    cards: [
+      {
+        word: 'forest',
+        translation: 'лес',
+        image: '../src/assets/images/nature/forest.svg',
+        audioSrc: '../src/assets/audio/nature/forest.mp3',
+      },
+      {
+        word: 'beach',
+        translation: 'пляж',
+        image: '../src/assets/images/nature/beach.svg',
+        audioSrc: '../src/assets/audio/nature/beach.mp3',
+      },
+      {
+        word: 'lake',
+        translation: 'озеро',
+        image: '../src/assets/images/nature/lake.svg',
+        audioSrc: '../src/assets/audio/nature/lake.mp3',
+      },
+      {
+        word: 'volcano',
+        translation: 'вулкан',
+        image: '../src/assets/images/nature/volcano.svg',
+        audioSrc: '../src/assets/audio/nature/volcano.mp3',
+      },
+      {
+        word: 'rainbow',
+        translation: 'радуга',
+        image: '../src/assets/images/nature/rainbow.svg',
+        audioSrc: '../src/assets/audio/nature/rainbow.mp3',
+      },
+      {
+        word: 'desert',
+        translation: 'пустыня',
+        image: '../src/assets/images/nature/desert.svg',
+        audioSrc: '../src/assets/audio/nature/desert.mp3',
+      },
+      {
+        word: 'snow',
+        translation: 'снег',
+        image: '../src/assets/images/nature/snow.svg',
+        audioSrc: '../src/assets/audio/nature/snow.mp3',
+      },
+      {
+        word: 'mountain',
+        translation: 'гора',
+        image: '../src/assets/images/nature/mountain.svg',
+        audioSrc: '../src/assets/audio/nature/mountain.mp3',
+      },
+    ],
+  },
+  {
+    name: 'colors',
+    cards: [
+      {
+        word: 'white',
+        translation: 'белый',
+        image: '../src/assets/images/colors/white.svg',
+        audioSrc: '../src/assets/audio/colors/white.mp3',
+      },
+      {
+        word: 'yellow',
+        translation: 'жёлтый',
+        image: '../src/assets/images/colors/yellow.svg',
+        audioSrc: '../src/assets/audio/colors/yellow.mp3',
+      },
+      {
+        word: 'orange',
+        translation: 'оранжевый',
+        image: '../src/assets/images/colors/orange.svg',
+        audioSrc: '../src/assets/audio/colors/orange.mp3',
+      },
+      {
+        word: 'red',
+        translation: 'красный',
+        image: '../src/assets/images/colors/red.svg',
+        audioSrc: '../src/assets/audio/colors/red.mp3',
+      },
+      {
+        word: 'purple',
+        translation: 'фиолетовый',
+        image: '../src/assets/images/colors/purple.svg',
+        audioSrc: '../src/assets/audio/colors/purple.mp3',
+      },
+      {
+        word: 'blue',
+        translation: 'синий',
+        image: '../src/assets/images/colors/blue.svg',
+        audioSrc: '../src/assets/audio/colors/blue.mp3',
+      },
+      {
+        word: 'green',
+        translation: 'зелёный',
+        image: '../src/assets/images/colors/green.svg',
+        audioSrc: '../src/assets/audio/colors/green.mp3',
+      },
+      {
+        word: 'black',
+        translation: 'чёрный',
+        image: '../src/assets/images/colors/black.svg',
+        audioSrc: '../src/assets/audio/colors/black.mp3',
+      },
+    ],
+  },
+  {
+    name: 'family',
+    cards: [
+      {
+        word: 'family',
+        translation: 'семья',
+        image: '../src/assets/images/family/family.svg',
+        audioSrc: '../src/assets/audio/family/family.mp3',
+      },
+      {
+        word: 'father',
+        translation: 'отец',
+        image: '../src/assets/images/family/father.svg',
+        audioSrc: '../src/assets/audio/family/father.mp3',
+      },
+      {
+        word: 'mother',
+        translation: 'мать',
+        image: '../src/assets/images/family/mother.svg',
+        audioSrc: '../src/assets/audio/family/mother.mp3',
+      },
+      {
+        word: 'brother',
+        translation: 'брат',
+        image: '../src/assets/images/family/brother.svg',
+        audioSrc: '../src/assets/audio/family/brother.mp3',
+      },
+      {
+        word: 'sister',
+        translation: 'сестра',
+        image: '../src/assets/images/family/sister.svg',
+        audioSrc: '../src/assets/audio/family/sister.mp3',
+      },
+      {
+        word: 'grandpa',
+        translation: 'дедушка',
+        image: '../src/assets/images/family/grandpa.svg',
+        audioSrc: '../src/assets/audio/family/grandpa.mp3',
+      },
+      {
+        word: 'grandma',
+        translation: 'бабушка',
+        image: '../src/assets/images/family/grandma.svg',
+        audioSrc: '../src/assets/audio/family/grandma.mp3',
+      },
+      {
+        word: 'pet',
+        translation: 'питомец',
+        image: '../src/assets/images/family/pet.svg',
+        audioSrc: '../src/assets/audio/family/pet.mp3',
+      },
+    ],
+  },
+  {
+    name: 'home',
+    cards: [
+      {
+        word: 'mirror',
+        translation: 'зеркало',
+        image: '../src/assets/images/home/mirror.svg',
+        audioSrc: '../src/assets/audio/home/mirror.mp3',
+      },
+      {
+        word: 'kitchen',
+        translation: 'кухня',
+        image: '../src/assets/images/home/kitchen.svg',
+        audioSrc: '../src/assets/audio/home/kitchen.mp3',
+      },
+      {
+        word: 'bed',
+        translation: 'кровать',
+        image: '../src/assets/images/home/bed.svg',
+        audioSrc: '../src/assets/audio/home/bed.mp3',
+      },
+      {
+        word: 'toilet',
+        translation: 'туалет',
+        image: '../src/assets/images/home/toilet.svg',
+        audioSrc: '../src/assets/audio/home/toilet.mp3',
+      },
+      {
+        word: 'door',
+        translation: 'дверь',
+        image: '../src/assets/images/home/door.svg',
+        audioSrc: '../src/assets/audio/home/door.mp3',
+      },
+      {
+        word: 'window',
+        translation: 'окно',
+        image: '../src/assets/images/home/window.svg',
+        audioSrc: '../src/assets/audio/home/window.mp3',
+      },
+      {
+        word: 'chair',
+        translation: 'стул',
+        image: '../src/assets/images/home/chair.svg',
+        audioSrc: '../src/assets/audio/home/chair.mp3',
+      },
+      {
+        word: 'fridge',
+        translation: 'холодильник',
+        image: '../src/assets/images/home/fridge.svg',
+        audioSrc: '../src/assets/audio/home/fridge.mp3',
+      },
+    ],
+  },
+];
+
+export default cardsData;

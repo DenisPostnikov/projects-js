@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Electrolize', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    height: 100vh;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.wrapper__clock {
+    font-size: 200px;
+}

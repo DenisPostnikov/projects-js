@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Picture puzzle game</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" type="image/png" href="src/images/favicon.png"/>
+  </head>
+
+  <body>
+    <!-- Timer -->
+    <div class="timer">
+      <button class="timer__button timer__button_start">Start</button>
+      <p class="timer__output">00:00</p>
+      <button class="timer__button timer__button_reset">Reset</button>
+    </div>
+    <p class="moves">Moves: <span class="moves__counter">0</span></p>
+
+    <!-- Puzzle -->
+    <div id="puzzle-wrapper"></div>
+
+    <!-- Modal -->
+    <div id="success-modal" class="modal-wrapper" style="display: none">
+      <div class="modal">
+        <div class="head">
+          <a class="btn-close trigger" href="#">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="content">
+          <div class="good-job">
+            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+            <h3 class="modal__heading"></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="bundle.js"></script></body>
+</html>

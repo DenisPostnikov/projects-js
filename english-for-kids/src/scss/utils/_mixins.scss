@@ -1,0 +1,19 @@
+@mixin flex($gap) {
+  display: flex;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin title($margin, $fontSize, $letterSpacing) {
+  margin: $margin 0;
+  font-size: $fontSize;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing;
+  text-align: center;
+  color: $color-dark-purple;
+}
